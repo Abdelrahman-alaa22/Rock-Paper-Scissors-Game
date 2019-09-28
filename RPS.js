@@ -8,13 +8,11 @@ const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
-
-
 // The computer choice by random numbers
 function getComputerChoice(){
     const choices = ["r", "p", "s"];
     const randomNumber = Math.floor(Math.random() * 3);
-    return choices[randomNumber];                         // A triky one, it's equaling the random number b el Index
+    return choices[randomNumber];                   // A triky one, it's equaling the random number b el Index
 }
 
 function convertToWord(letter){
@@ -22,8 +20,6 @@ function convertToWord(letter){
     if(letter === "p") return "Paper";
     if(letter === "s") return "Scissors";
 }
-
-
 
 // a function that gets the score and prints to the page the results in case the user won
 function win(userChoice, computerChoice){
@@ -64,11 +60,6 @@ function draw(userChoice, computerChoice){
     setTimeout(function(){userChoice_div.classList.remove("grey-glow")}, 400);
 }
 
-
-
-
-
-
 // The game function to see who wins
 function game(userChoice){
     const computerChoice = getComputerChoice();
@@ -94,7 +85,6 @@ function game(userChoice){
 
 // The user choice based on his click
 function main(){
-
     rock_div.addEventListener('click', function(){
         game("r");
     })
