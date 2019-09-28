@@ -61,6 +61,8 @@ function draw(userChoice, computerChoice){
 }
 
 // The game function to see who wins
+// The game function takes a single parameter "userChoice", and its value been generated form the main function
+// The main function takes the user action through the click event, based on the click it returns a value of RPS to game f();
 function game(userChoice){
     const computerChoice = getComputerChoice();
 
@@ -82,7 +84,7 @@ function game(userChoice){
             break;
     }
 }
-
+// 
 // The user choice based on his click
 function main(){
     rock_div.addEventListener('click', function(){
